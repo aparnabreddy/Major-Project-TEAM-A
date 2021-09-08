@@ -1,0 +1,63 @@
+{% extends 'header1.html'  %} 
+
+{%  block myContent  %}
+<!-- <body style="background-color: blue;"> -->
+    <center><h1 style="color:blue;">Delete Dongle</h1></center>
+<form action="http://127.0.0.1:8000/Admins/deletesearch3/" method="post">
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>Dongle Plan</td>
+                    <td><input name="planname" type="text" class="form-control" ></td>
+            
+                
+                    <td></td>
+                    <td><center><button type="submit" class="btn-success form-control">SEARCH</center</button></td>
+                </tr>
+            </table>
+        </form>
+            {% if data %} 
+            <form action="http://127.0.0.1:8000/Admins/delete_action_api3/" method="post">
+<table class="table">
+    {% for i in data %} 
+    <tr>
+        <td></td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>Dongle Plan</td>
+        <td><input name="newplanname" value="{{i.planname}}" type="text" class="form-control" readonly></td>
+    </tr>
+    <tr>
+        <td>Dongle Amount</td>
+        <td><input name="newdongleamount" value="{{i.dongleamount}}" type="text" class="form-control" readonly></td>
+    </tr>
+    
+    <tr>
+        <td>Offer/Discount</td>
+        <td><input name="newdongleofferdiscount" value="{{i.dongleofferdiscount}}" type="text" class="form-control" readonly></td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td><button type="submit" class="btn btn-warning">DELETE</button></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+{% endif %}
+
+
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+</body>
+{% endblock %}
+
+

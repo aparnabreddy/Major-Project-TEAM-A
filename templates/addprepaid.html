@@ -1,0 +1,48 @@
+{% extends "header1.html" %}
+
+{% block myContent %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <form action="http://127.0.0.1:8000/VoizFonica/add1/" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Prepaid Plan name</td>
+                    <td><input name ="prename" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Prepaid Amount</td>
+                    <td><input type="text" name="preamount" class="form-control"></td>
+                </tr>
+            
+                <tr>
+                    <td>Prepaid Validilty</td>
+                    <td><input type="text" name="prevalidity" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Benefits</td>
+                    <td><input type="text" name="prebenefits" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>Offer & Discount</td>
+                    <td><input type="text" name="preofferdiscount" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button class="btn btn-primary form-control">ADD PLAN</button></center></td>
+                </tr>
+            </table>
+        </form>
+
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

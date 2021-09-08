@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if request.session.uname %}
+    <h2>Welcome {{request.session.uname}} ({{request.session.uid}}) </h2>
+    {% else %} 
+    <h2>Login first</h2>
+    {% endif %} 
+    <tr>
+        <td></td>
+        <td><center><a href="http://127.0.0.1:8000/Admins/" class="btn btn-success">Add user</a></center></td>
+    </tr>
+</body>
+</html>

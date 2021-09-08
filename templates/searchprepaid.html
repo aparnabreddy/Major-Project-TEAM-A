@@ -1,0 +1,58 @@
+{% extends 'header1.html'  %} 
+
+{%  block myContent  %}
+<!-- <body style="background-color: blue;"> -->
+    <center><h1 style="color:blue;">Search </h1></center>
+<form action="http://127.0.0.1:8000/Admins/search1/" method="post">
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-borderless">
+                
+                <tr>
+                    <td>prename</td>
+                    <td><input name="prename" type="text" class="form-control"></td>
+                </tr>
+                
+                    <td></td>
+                    <td><center><button type="submit" class="btn-success form-control">SEARCH</center</button></td>
+                </tr>
+            </table>
+            {% if data %} 
+<table class="table">
+    {% for i in data %} 
+    <tr>
+        <td>Planname</td>
+        <td>{{i.prename}}</td>
+    </tr>
+    
+        <td>Amount</td>
+        <td>{{i.preamount}}</td>
+    </tr>
+    <tr>
+        <td>Validity</td>
+        <td>{{i.prevalidity}}</td>
+    </tr>
+    <tr>
+        <td>Benefits</td>
+        <td>{{i.prebenefits}}</td>
+    </tr>
+    <tr>
+        <td>Offer/discount</td>
+        <td>{{i.preofferdiscount}}</td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% endif %}
+
+{% endblock  %} 
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+</form>
+</body>
+

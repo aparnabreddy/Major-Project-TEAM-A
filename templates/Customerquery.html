@@ -1,0 +1,51 @@
+{% extends 'Customerheader.html' %} 
+{% block myContent %}
+
+<div class="container">
+        
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="class">
+                <tr>
+                    <td>mobile Number</td>
+                    <td>
+                        <input name="mobno" type="text" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Query Name</td>
+                    <td>
+                        <input name="queryname" type="text" class="form-control">
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Query Description</td>
+                    <td>
+                       <textarea name="querydes" id="" cols="80" rows="10" class="form-control"></textarea>
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>Query Solution</td>
+                    <td>
+                        <input name="querysolution" type="text" class="form-control" readonly>
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-success form-control">SUBMIT QUERY</center</button></td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+    </div>
+</div>
+
+</form>
+
+{% endblock %}
