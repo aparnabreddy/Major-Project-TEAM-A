@@ -1,0 +1,48 @@
+{% extends 'header.html' %}
+{% block myContent %}
+<link rel="stylesheet" href="/static/css/style.css">
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+    <CEnter><h1><marquee width="60%" direction="right" height="100px">
+      VIEW RECORDS
+      </marquee></h1></CEnter>
+    <h2 class="fonts">Queries List</h2>
+<table  class="table table-striped">
+  <thead class="table-primary">
+    <tr >
+      <th >Query ID</th>
+      <th >Mobile</th>
+      <th >Query name</th>
+      <th >Query Description</th>
+      <th >Query Solution</th>
+     
+
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in data %}
+    <tr >
+        <td >{{ i.id }}</td>
+      <td >{{ i.mobno }}</td>
+      <td >{{ i.queryname }}</td>
+      <td >{{ i.querydes }}</td>
+      <td >{{ i.querysolution }}</td>
+  
+
+      </tr>
+      {% endfor %}
+  </tbody>
+</table> </div>
+<div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+
+
+
+
+</div>
+</div>
+  </div>
+</div>
+      {% endblock  %}
